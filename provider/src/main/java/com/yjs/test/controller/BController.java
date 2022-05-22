@@ -1,23 +1,23 @@
-package com.com.yjs.controller;
+package com.yjs.test.controller;
 
+import com.yjs.test.AService;
 import com.yjs.test.TestService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+
 @Controller
-public class TestController   {
+public class BController {
 
-
-    @DubboReference
-    private TestService testService;
+    @DubboReference(check = false)
+    private AService aService;
 
 
     @GetMapping("/test")
-    public ResponseEntity<String> getByUserId() {
-        String s = testService.test1("zhansan");
+    public ResponseEntity<String> selectA() {
+        String s = aService.sayHello("wangwu");
         return ResponseEntity.ok(s);
     }
 
- }
+}
