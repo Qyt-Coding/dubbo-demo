@@ -1,4 +1,4 @@
-package com.yjs.controller.service;
+package com.yjs.service;
 
 import com.yjs.test.AService;
 import org.apache.dubbo.config.annotation.DubboService;

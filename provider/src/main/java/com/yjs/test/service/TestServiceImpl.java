@@ -1,5 +1,6 @@
-package com.yjs.test;
+package com.yjs.test.service;
 
+import com.yjs.test.TestService;
 import org.apache.dubbo.config.annotation.DubboService;
 
 @DubboService

@@ -1,5 +1,6 @@
 package com.yjs.controller;
 
+import com.yjs.config.DubboConfig;
 import com.yjs.test.TestService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class TestController   {
 
 
-    @DubboReference(check = false)
+    @DubboReference(check = false,url = DubboConfig.URL)
     private TestService testService;
 
 
