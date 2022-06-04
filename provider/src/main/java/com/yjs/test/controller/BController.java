@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BController {
 
-    @DubboReference(check = false,url = DubboConfig.URL)
+    @DubboReference(check = false,url = "dubbo://127.0.0.1:20880")
     private AService aService;
 
     @Autowired
